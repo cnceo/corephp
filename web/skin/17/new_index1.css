@@ -1,0 +1,192 @@
+.header .menu1{
+	margin-left: 220px;
+	margin-bottom: 12px;
+}
+
+
+.skin_blue #left_main .title{
+	background: 0 none;
+	background-color:#2161b3;
+	color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 4px 0px 0 1px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #2866b5;
+    background:linear-gradient(to bottom, rgba(94,140,200,1) 1%,rgba(40,102,181,1) 100%);
+}
+
+.skin_red #left_main .title{
+	background: 0 none;
+	background-color:#d87c86;
+	color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 4px 0px 0 1px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #b53550;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgb(216, 124, 134) 0%, rgb(199, 94, 114) 100%) repeat scroll 0 0;
+}
+
+#left_main .sider-col1{
+	margin-left: 5px;
+	width: 179px;
+    border-top: none!important;
+    line-height: 20px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 13px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999;
+    background-color: #fff;
+    
+   
+}
+#left_main .sider-col1 label,
+#left_main .sider-col1 span{
+	 color: #333;
+}
+
+.skin_blue .u-table2 thead th{
+	    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%)!important;
+}
+
+.skin_blue #left_main .sider_fl{
+	width: 30%;
+	display: inline-block;
+	margin: 0;
+	margin-top: 3px;
+	border: 1px solid #f4521b;
+	background: linear-gradient(to bottom, rgba(255,148,97,1) 0%,rgba(255,104,53,1) 100%);
+}
+
+.skin_red #left_main .sider_fl{
+	width: 30%;
+	display: inline-block;
+	margin: 0;
+	margin-top: 3px;
+	border: 1px solid #f4521b;
+	background: linear-gradient(to bottom, rgba(255,148,97,1) 0%,rgba(255,104,53,1) 100%);
+}
+
+.side_left .title{
+	height: 28px;
+	line-height: 28px;
+}
+#left_main .sider-col1{
+	padding-bottom:10px ;
+}
+
+.menu2 span{
+	font-size: 13px;
+	width: 5em;
+	display: inline-block;
+	text-align: center;
+}
+
+.header .menu4 a{
+	display: inline-block;
+	float: initial;
+	margin: 0;
+	background: 0 none;
+}
+.header .menu4{
+	display: inline-block!important;
+}
+
+.color1{
+	display: inline-block;
+	float: left;
+	margin-top: 8px;
+}
+.color1 i{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border: 1px solid #fff;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.header .menu3 a{
+	margin-top: 14px;
+	margin-left: 12px;
+}
+
+#homeCateMenus{
+	background: linear-gradient(to bottom, rgba(230,230,230,1) 0%,rgba(231,231,231,1) 100%);
+}
+.header .sub a{
+	color: #333;
+}
+.header .lotterys .selected{
+	background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(230,230,230,1) 100%);
+}
+.header .lotterys{
+	height: 36px;
+	line-height: 36px;
+}
+.header .lotterys .selected{
+	height: 36px;
+	color: #1e579f;
+}
+.header .lotterys a span{
+	height: 36px;
+}
+.header .lotterys a{
+	height: 36px;
+}
+.header .sub a:hover, .header .sub .selected{
+	color: #f98d5c;
+}
+.header .lotterys a:hover{
+	color: #1e579f;
+	background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(230,230,230,1) 100%);
+}
+.skin_blue .header .lotterys a span{
+	background: 0 none;
+}
+.skin_red .header .lotterys a span{
+	background: 0 none;
+}
+
+.skin_blue #left_main .wy{
+	background: linear-gradient(to bottom, rgba(255,148,97,1) 0%,rgba(255,104,53,1) 100%);
+}
+
+.skin_blue #left_main .kf{
+	    background: linear-gradient(to bottom, rgba(93,210,136,1) 0%,rgba(57,197,109,1) 100%);
+}
+
+.skin_red #left_main .wy{
+	background: linear-gradient(to bottom, rgba(255,148,97,1) 0%,rgba(255,104,53,1) 100%);
+}
+
+.skin_red #left_main .kf{
+	    background: linear-gradient(to bottom, rgba(93,210,136,1) 0%,rgba(57,197,109,1) 100%);
+}
+.side_left .title a:hover{
+	color: #fff!important;
+}
+
+.popPanel  a:hover{
+	background: #fff;
+	color: #1e579f;
+}
+
+

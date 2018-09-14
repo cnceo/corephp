@@ -1,0 +1,259 @@
+<style>
+	/*.bar-header{
+		display: none;
+	}*/
+	#beijing,#gginfo{
+		display: none;
+	}
+	#beijing{
+		background: rgb(0,0,0,0.7);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 999;
+	}
+	#gginfo{
+		background: #fff;
+		width: 80%;
+		height: auto;
+		position: absolute;
+		z-index: 1000;
+		left: 0px;
+		right: 0px;
+		margin: 0 auto;
+		border-radius: 10px;
+		top: 10%;
+	}
+	.tj_title{
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: #000;
+		font-size: 20px;
+		font-weight: 600;
+		background: #EBEEF3;
+		border-bottom: 1px solid #CBCCCE;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.tj_info{
+		line-height: 18px;
+		text-align: left;
+		color: #343b45;
+		font-size: 12px;
+		background: #fff;
+		margin: 10px;
+	}
+	.qx_info{
+		height: 70px;
+		width: 80%;
+		margin-top: 10px;
+		margin: 0 auto;
+	}
+	.quxiao{
+		width: 45%;
+		float: left;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		background:#EBEEF3;
+		margin-right: 10%;
+		text-align: center;
+		border-radius: 10px;
+		border-bottom: 1px solid #cbccce;
+	}
+	.queding{
+		width: 45%;
+		float: left;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		background:#218AFF;
+		text-align: center;
+		border-radius: 10px;
+		color: #fff;
+	}
+	#tanchu,#tanchuinfo{
+		visibility: hidden;
+	}
+</style>
+<div id="beijing"></div>
+
+
+<ion-view class="m-index" view-title="">
+	<div style="width: 100%;height: 44px;padding: 5px;">
+	<div side="left" style="float: left;margin-top: -3px;">
+    	<a class="logo" href="#/home"><img style="height: 40px;" src="/static/images/logo/wycp.png"></a>
+  	</div>
+	<div side="right" style="float: right;margin-top: -5px;">
+    	<span ng-if="isLogin">
+	  		<a style="background: url(/images/userinfo.png) 0 0 no-repeat;background-size: 20px 20px;padding-left: 25px;" class="user-button" href="#/ucenter/index"><span class="span-user" style="color: #fff;line-height: 44px;">{{My.getUserName()}}</span></a>
+    		<a style="min-height: 25px;line-height: 25px;margin-top: 9px;" class="button ry-button" ng-click="logout();">退出</a>
+    		<!-- <a class="button ry-button" ng-click="showTestModal();">调试</a> -->
+  		</span>
+  	</div>
+	  	</div>
+  	<ion-content style="margin-top: 44px;">
+	   	<ion-slide-box delegate-handle="home-handle" auto-play="true" does-continue="true" slide-interval="3000">
+		    <ion-slide ng-repeat="url in slideList"><img ng-src="{{url}}" /></ion-slide>
+		</ion-slide-box>
+		
+		<div class="row notice">
+<!-- 			<div class="col col-10 notice-icon"></div>
+			<div class="col col-90 notice-content" id="notice_id">
+<div align=right class=""><table>
+<tr>
+	<td valign="middle" align="left">&nbsp;</td>
+	<td width="180"><a href="#/bank/deposit"><img src="../../images/cz.png" width="80" height="30" border="0" alt=""></a>&nbsp;&nbsp;<a href="#/bank/withdraw"><img src="../../images/tx.png" width="80" height="30" border="0" alt=""></a>&nbsp;&nbsp;</td>
+</tr>
+</table></div>
+			</div> -->
+		<div class="col col-10 notice-icon"></div>
+			<div class="col col-90 notice-content">
+				<marquee scrollamount="3" style="height:35px;height:35px" ng-click="showNoticeInfo();" class="ng-binding"><font color="red">聚宝盆欢迎你</font></marquee>
+			</div>
+		</div>
+		
+		<div class="gamelist">
+			<div class="title"><img src="./images/icon-game.png">热门游戏</div>
+			<div class="row">
+			<div class="col col-33">
+			<div class="gamebox">
+				<a href="#/lottery/index/72"> <img src="../../images/g_mssc.png">
+					<p>极速赛车</p>
+				</a>
+			</div>
+		</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/50">
+							<img src="../../images/g-bjpk10.png">
+							<p>北京赛车</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/55">
+							<img src="../../images/g-xyft.png" alt="幸运飞艇">
+						<p>幸运飞艇</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+			<div class="gamebox">
+				<a href="#/lottery/index/73"> <img src="../../images/g-msssc.png">
+					<p>极速时时彩</p>
+				</a>
+			</div>
+		</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/1">
+							<img src="../../images/g-ssc.png" alt="重庆时时彩">
+						<p>重庆时时彩</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/66">
+							<img src="../../images/g-pcdd.png" alt="PC蛋蛋">
+						<p>PC蛋蛋</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/70">
+							<img src="../../images/g-hkc.png" alt="香港六合彩">
+						<p>香港六合彩</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/index/60">
+							<img src="/images/g-klsf.png">
+							<p>快乐十分</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a href="#/lottery/list">
+							<img src="../../images/g-hfc.png" alt="更多彩票">
+						<p>更多彩票</p>
+						</a> 
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a target="_blank" href="/">
+							<img src="../../images/app_down.png">
+							<p>APP下载</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a target="_blank" href="{{webUrl}}?from=m">
+							<img src="../../images/g-computer.png">
+							<p>电脑版</p>
+						</a>
+					</div>
+				</div><div class="col col-33">
+					<div class="gamebox">
+						<a target="_blank"  href="mqqwpa://im/chat?chat_type=wpa&uin=2167816915&version=1&src_type=web&web_src=com">
+							<img src="../../images/menu-service.png">
+							<p>在线客服</p>
+						</a>
+					</div>
+				</div>
+				
+					</div>
+				
+				</div>
+				<!--优惠活动-->
+ 				<!-- <div class="activity">
+					<div class="head">
+		<div class="title">
+			<img src="/images/icon-activity.png">优惠活动
+		</div>
+		<a href="#">更多&gt;&gt;</a>
+	</div>
+	<div class="activity-list">
+<a href="#"><p class="ng-binding">天天签到天天领取6元赢500万不是梦</p>
+			<img src="/images/5.jpg">
+		</a>
+		
+	</div>
+</div> -->
+		<!--优惠活动结束-->
+  	</ion-content>
+
+</ion-view>
+
+	<!--111111111111111-->
+	<div class="copyright">
+	<p class="ng-binding"></p>
+	</div>
+	<!-- -->
+
+
+	<ion-footer-bar class="max">
+		<ion-tabs class="tabs-icon-top tabs-light"> 
+			<ion-tab title="首页" icon-off="icon-home" icon-on="icon-home" href="#/home"></ion-tab>
+			<ion-tab title="游戏大厅" icon-off="icon-youxi" icon-on="icon-youxi" href="#/lottery/list"></ion-tab>
+			<ion-tab title="资金管理" icon-off="icon-29" icon-on="icon-29" href="#/bank/deposit"></ion-tab>
+			<!-- <ion-tab title="优惠活动" icon-off="icon-29" icon-on="icon-29" href="#/bank/deposit"></ion-tab> -->
+			<ion-tab title="我的" icon-off="icon-yonghu" icon-on="icon-yonghu" href="#/ucenter/index"></ion-tab>
+		</ion-tabs>
+	</ion-footer-bar>
+
+	
+<!--
+<div id="tanchu" class="backdrop visible active"></div>
+<div id="tanchuinfo" class="popup-container info-mdf popup-showing active" ng-class="cssClass" style="">
+    <div class="popup">
+        <div class="popup-head">
+            <h3 class="popup-title ng-binding">公告</h3>
+          
+        </div>
+        <div class="popup-body"><span>通知：网易彩票正式更名为"321彩票，会员帐号，会员额度以及登入网址保持不变。</span></div>
+        <div class="popup-buttons">
+            <button onclick="ttgb()" class="button ng-binding button-default">取消</button>
+            <button onclick="ttgb()" class="button ng-binding button-positive">确定</button>
+        </div>
+    </div>
+</div>-->

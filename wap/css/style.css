@@ -1,0 +1,181 @@
+/*清楚浮动*/
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.f_l{
+    float: left;
+}
+.f_r{
+    float: right;
+}
+/*遮罩层 star*/
+.mask2{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: Alpha(opacity=50);
+    opacity: 0.5;
+    background: #000000;
+    z-index: 99;
+}
+/*遮罩层 end*/
+
+
+/*所有弹窗通用属性 star*/
+.all_popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    border-radius: 5px;
+    -webkit-user-select: none; /*文字不可被选中*/
+    -khtml-user-select: none;/*文字不可被选中*/
+    -moz-user-select: none;/*文字不可被选中*/
+    -ms-user-select: none;/*文字不可被选中*/
+    -o-user-select: none;/*文字不可被选中*/
+    user-select: none;/*文字不可被选中*/
+    color: #ffffff;
+    padding: 0 20px 20px 20px;
+}
+
+.all_popup .bg {
+    background: rgb(30,87,153);
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(0,219,255,1) 0%, rgba(0,165,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(0,219,255,1) 0%,rgba(0,165,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(0,219,255,1) 0%,rgba(0,165,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#00a5ff',GradientType=0 );
+}
+
+/*所有弹窗通用属性 end*/
+
+/*第一个弹窗 star*/
+.all_popup .popup1{
+
+    width: 300px;
+}
+
+    /*分页*/
+.all_popup .popup1 .pagination{
+    text-align: center;
+    width: 120px;
+    margin: 10px auto;
+}
+.all_popup .popup1 .pagination a{
+    color: #ffffff;
+}
+
+    /*图片*/
+.all_popup .popup1 .icon_img {
+    width: 155px;
+    height: 148px;
+    background: url(/images/popup_icon.png);
+    background-position: -161px -14px;
+    background-repeat: no-repeat;
+    margin: 25px auto;
+}
+    /*公告内容*/
+.all_popup .popup1 .content1{
+    font-size: 13px;
+    color: #fff;
+    width: 252px;
+    text-align: center;
+    margin: 10px auto 0;
+    line-height: 22px;
+}
+
+    /*按钮*/
+.all_popup .popup1 .btn_wrap{
+    text-align: center;
+}
+.all_popup .popup1 button{
+    font-weight: 900;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    padding: 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    border: none;
+    outline: none;
+    background-color: #fec436;
+    border-bottom: 5px solid #d18922;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+.all_popup .popup1 button:hover{
+    background-color: #e7ad36;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+    /*关闭*/
+.all_popup .icon_close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 14px;
+    height: 16px;
+    background: url(/images/popup_icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/*第一个弹窗 end*/
+
+/*第二个弹窗 star*/
+.all_popup .popup2{
+    width: 600px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+    /*图片*/
+.all_popup .popup2 .icon_img{
+    margin: 0 12px 0 12px;
+    width: 155px;
+    height: 149px;
+    background: url(/images/popup_icon.png);
+    background-position: -5px 0;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+    /*公告内容*/
+.all_popup .popup2 .content{
+    width: 404px;
+    color: #fff;
+    overflow-y: auto;
+    max-height: 300px;
+    padding-right: 8px;
+}
+.all_popup .popup2 .content ul li{
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff;
+}
+.all_popup .popup2 .content ul li .time{
+    font-size: 13px;
+    line-height: 18px;
+}
+
+/*第二个弹窗 end*/
